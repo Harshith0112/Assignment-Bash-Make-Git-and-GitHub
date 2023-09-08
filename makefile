@@ -1,13 +1,10 @@
-all: README.md index.md
+start: README.md
 
 README.md: guessinggame.sh
-	echo "Assignment: Bash, Make, Git, and GitHub" > README.md
-	date >> README.md
-	cat guessinggame.sh | wc -l >> README.md
-
-index.md: README.md
-	cp ./README.md ./index.md
+	echo "# Peer-graded Assignment: Bash, Make, Git, and GitHub">README.md
+	echo "## Guessing game">>README.md
+	echo "**Last modified on:** `date +%F\ %r`  ">>README.md
+	echo "**Number of lines in code:** `wc -l guessinggame.sh|egrep -o "[0-9]+"`">>README.md
 
 clean:
-	rm README.md
-	rm index.md
+	rm -i README.md
