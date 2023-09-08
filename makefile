@@ -1,4 +1,3 @@
-all: README.md
 all: README.md index.md
 
 README.md: guessinggame.sh
@@ -11,5 +10,4 @@ index.md: README.md
 
 clean:
 	rm README.md
-
 	rm index.md
