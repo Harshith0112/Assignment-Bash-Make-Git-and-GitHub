@@ -1,5 +1,3 @@
-index.md
-
 all: README.md
 all: README.md index.md
 
